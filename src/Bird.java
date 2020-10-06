@@ -1,5 +1,6 @@
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 public class Bird {
@@ -27,7 +28,7 @@ public class Bird {
 
         // load the bird image.
         try {
-            img = ImageIO.read(getClass().getResource("/Resources/0.png"));
+            img = ImageIO.read(new File("/Resources/0.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,7 +39,7 @@ public class Bird {
         //An array to store all the bird images.
         try {
             for(int i = 0; i < 8; i++) {
-                imgs[i] = ImageIO.read(getClass().getResource("/Resources/" + i +".png"));
+                imgs[i] = ImageIO.read(new File("/Resources/" + i +".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();

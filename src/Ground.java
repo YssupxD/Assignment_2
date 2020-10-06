@@ -1,5 +1,6 @@
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 public class Ground {
@@ -9,7 +10,7 @@ public class Ground {
 
     public Ground() {
         try {
-            img = ImageIO.read(getClass().getResource("/Resources/ground.png"));
+            img = ImageIO.read(new File("/Resources/ground.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
