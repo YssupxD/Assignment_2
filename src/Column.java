@@ -11,8 +11,13 @@ public class Column {
     static final int gap = 144; //gap between upper column and lower column
     Random r = new Random();
 
-    public Column(int n) throws IOException {
-        img = ImageIO.read(getClass().getResource("/Resources/column.png"));
+    public Column(int n){
+        try {
+            img = ImageIO.read(getClass().getResource("/Resources/column.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         width = img.getWidth();
         height = img.getHeight();
 
