@@ -14,8 +14,8 @@ public class Bird {
 
     double s;
     double t;
-    static final double g = 9.8;//acceleration of gravity
-    static final double v0 = 20;//speed at the beginning
+    static final double g = 7;//acceleration of gravity
+    static final double v0 = 25;//speed at the beginning
     double speed;//current speed
 
     double rad;//the angle rotate when the bird jumps.
@@ -28,7 +28,7 @@ public class Bird {
 
         // load the bird image.
         try {
-            img = ImageIO.read(new File("/Resources/0.png"));
+            img = ImageIO.read(new File("Resources/Images/0.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,7 +39,7 @@ public class Bird {
         //An array to store all the bird images.
         try {
             for(int i = 0; i < 8; i++) {
-                imgs[i] = ImageIO.read(new File("/Resources/" + i +".png"));
+                imgs[i] = ImageIO.read(new File("Resources/Images/" + i +".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,7 +59,7 @@ public class Bird {
         rad = Math.atan(s / 8);
     }
 
-    public void flyup() {
+    public void flyUp() {
         speed = v0;
     }
 

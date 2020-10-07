@@ -14,7 +14,7 @@ public class Column {
 
     public Column(int n){
         try {
-            img = ImageIO.read(new File("/Resources/column.png"));
+            img = ImageIO.read(new File("Resources/Images/column.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -10,7 +10,7 @@ public class Ground {
 
     public Ground() {
         try {
-            img = ImageIO.read(new File("/Resources/ground.png"));
+            img = ImageIO.read(new File("Resources/Images/ground.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
