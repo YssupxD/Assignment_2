@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Ground {
+public class Ground extends Game {
     int x = 0;
     int y = 500;
     BufferedImage img;
