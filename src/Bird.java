@@ -1,4 +1,7 @@
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -20,12 +23,13 @@ public class Bird {
 
     double rad;//the angle rotate when the bird jumps.
 
+
+
     public Bird() {
         x = 140;
         y = 220;
         t = 0.25;
         speed = v0;
-
         // load the bird image.
         try {
             img = ImageIO.read(new File("Resources/Images/0.png"));
@@ -80,4 +84,6 @@ public class Bird {
         }
         return false;
     }
+
+    //Needs implementation
 }
