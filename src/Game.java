@@ -148,8 +148,14 @@ public class Game extends JPanel implements ActionListener{
         MouseListener ml = new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
+                int mX = e.getX();
+                int mY = e.getY();
+                System.out.println( "location X: " +mX);
+                System.out.println( "location y: " +mY);
                 super.mousePressed(e);
                 switch(state) {
+
+
                     case START:
                         state = RUNNING;
                         break;
@@ -159,12 +165,17 @@ public class Game extends JPanel implements ActionListener{
                         break;
                     case GAMEOVER:
                         am.AudioManagement("Resources/Audios/swoosh.wav");
-                        state = START;
-                        score = 0;
-                        bird = new Bird();
-                        c1 = new Column(1);
-                        c2 = new Column(2);
-                        ground = new Ground();
+                        //state = START;
+                        if(mX >= 130 && mX <=280) {
+                            if (mY >= 329  && mY <= 413) {
+                                state = START;
+                                score = 0;
+                                bird = new Bird();
+                                c1 = new Column(1);
+                                c2 = new Column(2);
+                                ground = new Ground();
+                            }
+                        }
                         break;
                 }
             }
